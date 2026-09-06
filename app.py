@@ -62,13 +62,13 @@ LANG_CODES = {"English": "en", "Hindi": "hi"}
 # ── Model loading (cached) ───────────────────────────────────────────────────
 @st.cache_resource(show_spinner=False)
 def load_pipeline(lang_code: str):
-    """Load local Stanza pipeline with zero network overhead."""
+    """Load local Stanza pipeline safely."""
     return stanza.Pipeline(
         lang_code,
         processors="tokenize,pos",
         use_gpu=False,
         verbose=False,
-        download_method=None
+        download_method=stanza.DownloadMethod.REUSE_RESOURCES
     )
 
 @st.cache_resource(show_spinner=False)
