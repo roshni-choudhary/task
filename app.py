@@ -256,7 +256,7 @@ def main():
     st.markdown(
         "<h1 style='text-align:center;'>🏷️ Composite Similarity Dashboard</h1>"
         "<p style='text-align:center;color:#666;'>Evaluates both <strong>Syntax Similarity</strong> (Stanza UPOS tag distribution) "
-        "and <strong>Semantic Similarity</strong> (SBERT MPNet).</p>",
+        "and <strong>Semantic Similarity</strong> (XLM-RoBERTa-based SBERT).</p>",
         unsafe_allow_html=True,
     )
     st.divider()
