@@ -16,6 +16,8 @@ import streamlit as st
 import stanza
 from collections import Counter
 import pandas as pd
+import transformers
+transformers.logging.disable_progress_bar()
 from sentence_transformers import SentenceTransformer, util
 
 # ── Page config ─────────────────────────────────────────────────────────────
